@@ -1,6 +1,6 @@
-# tmux Phone Control
+# tmux-anywhere
 
-Control and monitor your tmux sessions from **any phone browser** — real-time terminal output, command input, and quick-action keys. Designed for checking on long-running processes (AI agents, training jobs, etc.) while you're away from your desk.
+> Control and monitor your tmux sessions from any phone browser — real-time terminal streaming, command input, and mobile-optimized UI.
 
 ---
 
