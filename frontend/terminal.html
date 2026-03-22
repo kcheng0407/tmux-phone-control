@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="theme-color" content="#0d0d1a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Terminal — tmux Control</title>
+    <!-- xterm.js via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.css" />
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="terminal-page">
+
+<header class="app-header terminal-header">
+    <button id="back-btn" class="icon-btn" title="Back to dashboard">←</button>
+    <div class="pane-info">
+        <span id="pane-label">Loading…</span>
+    </div>
+    <div id="ws-status" class="ws-indicator disconnected" title="WebSocket status"></div>
+</header>
+
+<div id="terminal-container"></div>
+
+<div class="input-bar">
+    <!-- Quick-action keys -->
+    <div class="quick-keys">
+        <button class="qkey" data-key="C-c"  title="Ctrl+C">^C</button>
+        <button class="qkey" data-key="C-z"  title="Ctrl+Z">^Z</button>
+        <button class="qkey" data-key="Up"   title="Up arrow">↑</button>
+        <button class="qkey" data-key="Down" title="Down arrow">↓</button>
+        <button class="qkey" data-key="Left" title="Left arrow">←</button>
+        <button class="qkey" data-key="Right" title="Right arrow">→</button>
+        <button class="qkey" data-key="Tab"  title="Tab">⇥</button>
+        <button class="qkey" data-key="q"    title="q">q</button>
+        <button class="qkey" data-key="Enter" title="Enter">↵</button>
+    </div>
+    <!-- Command input -->
+    <div class="send-row">
+        <input type="text" id="cmd-input"
+               placeholder="Send command…"
+               autocomplete="off"
+               autocorrect="off"
+               autocapitalize="off"
+               spellcheck="false"
+               enterkeyhint="send" />
+        <button id="send-btn" class="btn-primary" title="Send">▶</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/xterm@5.3.0/lib/xterm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.8.0/lib/xterm-addon-fit.js"></script>
+<script src="/static/app.js"></script>
+<script>initTerminal();</script>
+</body>
+</html>

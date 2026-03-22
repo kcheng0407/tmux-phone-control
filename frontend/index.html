@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="theme-color" content="#1a1a2e" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>tmux Control</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<!-- ── Login Screen ──────────────────────────────────────────────────────── -->
+<div id="login-screen" class="login-screen hidden">
+    <div class="login-box">
+        <div class="login-icon">🖥️</div>
+        <h1>tmux Control</h1>
+        <p class="subtitle">Enter your access token to connect</p>
+        <input type="password" id="token-input"
+               placeholder="Access token"
+               autocomplete="current-password"
+               enterkeyhint="go" />
+        <button id="login-btn" class="btn-primary">Connect</button>
+        <p id="login-error" class="error hidden"></p>
+    </div>
+</div>
+
+<!-- ── Main Dashboard ────────────────────────────────────────────────────── -->
+<div id="dashboard" class="hidden">
+    <header class="app-header">
+        <h1>🖥️ tmux Control</h1>
+        <button id="refresh-btn" class="icon-btn" title="Refresh sessions">↻</button>
+    </header>
+    <main id="sessions-container">
+        <div class="loading">Loading sessions…</div>
+    </main>
+</div>
+
+<script src="/static/app.js"></script>
+<script>initDashboard();</script>
+</body>
+</html>
