@@ -49,7 +49,7 @@ The script prints the URL to open on your phone:
 ║  🖥   tmux Phone Control                     ║
 ╠══════════════════════════════════════════════╣
 ║  Server : http://0.0.0.0:8765                ║
-║  Phone  : http://192.168.1.42:8765           ║
+║  Phone  : http://<your-server-ip>:8765       ║
 ╚══════════════════════════════════════════════╝
 ```
 
